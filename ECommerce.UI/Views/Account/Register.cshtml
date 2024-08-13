@@ -1,0 +1,103 @@
+﻿@model RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+
+<div class="container h-100">
+    <div class="row justify-content-sm-center h-100">
+        <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
+            <div class="text-center my-5">
+                <img src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="logo" width="100">
+            </div>
+            <div class="card shadow-lg">
+                <div class="card-body p-5">
+                    <h1 class="fs-4 card-title fw-bold mb-4">Register</h1>
+                    <form method="post" asp-action="Register" class="needs-validation" novalidate="" autocomplete="off">
+                        <div class="mb-3">
+                            <label class="mb-2 text-muted" for="name">Name</label>
+                            <input asp-for="Name" id="name" type="text" class="form-control" name="name" value="" required autofocus>
+                            <div class="invalid-feedback">
+                                Name is required
+                            </div>
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+
+                        @* ----------------------------------------------------------------------------------- *@
+
+                        <div class="mb-3">
+                            <label class="mb-2 text-muted" for="name">Surname</label>
+                            <input asp-for="Surname" id="surname" type="text" class="form-control" name="surname" value="" required autofocus>
+                            <div class="invalid-feedback">
+                                Surname is required
+                            </div>
+                            <span asp-validation-for="Surname" class="text-danger"></span>
+                        </div>
+
+                        @* ----------------------------------------------------------------------------------- *@
+
+
+                        <div class="mb-3">
+                            <label class="mb-2 text-muted" for="name">Username</label>
+                            <input asp-for="Username" id="username" type="text" class="form-control" name="username" value="" required autofocus>
+                            <div class="invalid-feedback">
+                                Username is required
+                            </div>
+                            <span asp-validation-for="Username" class="text-danger"></span>
+                        </div>
+
+                        @* ----------------------------------------------------------------------------------- *@
+
+                        <div class="mb-3">
+                            <label class="mb-2 text-muted" for="email">E-Mail Address</label>
+                            <input asp-for="Email" id="email" type="email" class="form-control" name="email" value="" required>
+                            <div class="invalid-feedback">
+                                Email is invalid
+                            </div>
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+
+                        @* ----------------------------------------------------------------------------------- *@
+
+                        <div class="mb-3">
+                            <label class="mb-2 text-muted" for="password">Password</label>
+                            <input asp-for="Password" id="password" type="password" class="form-control" name="password" required>
+                            <div class="invalid-feedback">
+                                Password is required
+                            </div>
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        @* ----------------------------------------------------------------------------------- *@
+
+                        <div class="mb-3">
+                            <label class="mb-2 text-muted" for="password">Password</label>
+                            <input asp-for="ConfirmPassword" id="password" type="password" class="form-control" name="password" required>
+                            <div class="invalid-feedback">
+                                Confirm Password is required
+                            </div>
+                            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                        </div>
+                        <p class="form-text text-muted mb-3">
+                            By registering you agree with our terms and condition.
+                        </p>
+
+                        <div class="align-items-center d-flex">
+                            <button type="submit" class="btn btn-primary ms-auto">
+                                Register
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer py-3 border-0">
+                    <div class="text-center">
+                        Already have an account? <a 
+                            class="text-dark">Login</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5 text-muted">
+                Copyright &copy; 2017-2021 &mdash; Your Company
+            </div>
+        </div>
+    </div>
+</div>
